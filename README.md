@@ -10,19 +10,19 @@ go get github.com/go-playground/universal-translator
 
 #usage - apply rule in struct  
 type ContactRequest struct {  
-	CustomerID int       `json:"customer_id,omitempty"`  
-	Type       int       `json:"type" validate:"required"`  
-	Fullname   string    `json:"fullname" validate:"required,min=5"`  
-	Phone      string    `json:"phone" validate:"required,min=10,max=14"`  
-	Email      string    `json:"email" validate:"required,email"`  
-	Address    string    `json:"address" validate:"required"`  
-	Location   []float64 `json:"location" validate:"required"`  
-	RegionID   int       `json:"region_id" validate:"required"`  
-	District   string    `json:"district" validate:"required"`  
-	Province   string    `json:"province" validate:"required"`  
+	&nbsp;&nbsp;CustomerID int       `json:"customer_id,omitempty"`  
+	&nbsp;&nbsp;Type       int       `json:"type" validate:"required"`  
+	&nbsp;&nbsp;Fullname   string    `json:"fullname" validate:"required,min=5"`  
+	&nbsp;&nbsp;Phone      string    `json:"phone" validate:"required,min=10,max=14"`  
+	&nbsp;&nbsp;Email      string    `json:"email" validate:"required,email"`  
+	&nbsp;&nbsp;Address    string    `json:"address" validate:"required"`  
+	&nbsp;&nbsp;Location   []float64 `json:"location" validate:"required"`  
+	&nbsp;&nbsp;RegionID   int       `json:"region_id" validate:"required"`  
+	&nbsp;&nbsp;District   string    `json:"district" validate:"required"`  
+	&nbsp;&nbsp;Province   string    `json:"province" validate:"required"`  
 }  
 
 #usage -- validate struct (in handler/model/..)  
 if err := validator.Validate(objRequest); err != nil {  
-  fmt.Println(err.Error())  
+  &nbsp;&nbsp;fmt.Println(err.Error())  
 }
